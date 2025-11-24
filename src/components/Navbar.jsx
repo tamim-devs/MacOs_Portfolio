@@ -11,7 +11,7 @@ const Navbar = () => {
       setTime(dayjs());
     },1000)
 
-     return () => clearInterval(interval);
+  
    },[])
   return (
     <nav>
