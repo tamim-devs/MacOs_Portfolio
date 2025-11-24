@@ -3,17 +3,17 @@
 @import "tailwindcss";
 
 html,
-body{
-width: 100dvw;
-overflow: hidden;
-height: 100dvh;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-image: url('../public/images/wallpaper.png');
+body {
+    width: 100dvw;
+    overflow: hidden;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../public/images/wallpaper.png');
 }
 
-@theme{
+@theme {
     --font-georama: 'Georama', sans-serif;
     --font-jost: 'Jost', sans-serif;
     --breakpoint-3xl: 1920px;
@@ -23,7 +23,7 @@ background-image: url('../public/images/wallpaper.png');
     @apply flex items-center justify-center;
 }
 
-@utility flex-col {
+@utility flex-col-center {
     @apply flex flex-col items-center justify-center;
 }
 
@@ -44,22 +44,30 @@ background-image: url('../public/images/wallpaper.png');
         @apply flex items-center max-sm:justify-center gap-5;
     }
 
-    nav:last-child{
+    nav:last-child {
         @apply max-sm:hidden;
     }
 
-    ul{
+    ul {
         @apply flex items-center gap-5 max-sm:hidden
     }
 
-    p{
+    p {
         @apply text-sm cursor-pointer hover:underline transition-all duration-300
     }
-    .icon-hover {
-  @apply transition-all duration-300 hover:scale-110 cursor-pointer;
-}
 
-time{
-    @apply text-xs font-bold 
-}
+    .icon-hover {
+        @apply transition-all duration-300 hover:scale-110 cursor-pointer;
+    }
+
+    time {
+        @apply text-xs font-bold
+    }
+
+    #welcome {
+        @apply w-dvw  flex-col text-white h-dvh flex items-center justify-center p-5 max-sm:flex-col sm:p-10 md:p-16 lg:p-20 gap-5;
+    }
+    .small-device{
+        @apply sm:hidden
+    }
 }
