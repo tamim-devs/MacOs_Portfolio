@@ -65,7 +65,7 @@ body {
     }
 
     #welcome {
-        @apply w-dvw  flex-col text-white h-dvh flex items-center justify-center p-5 max-sm:flex-col sm:p-10 md:p-16 lg:p-20 gap-5;
+        @apply w-dvw  flex-col text-white h-dvh flex items-center justify-center p-5 max-sm:flex-col sm:p-10 md:p-16 lg:p-20 ;
     }
     .small-device{
         @apply sm:hidden
