@@ -1,10 +1,12 @@
 import { dockApps } from "#constants";
+import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { use, useRef } from "react";
 import { Tooltip } from "react-tooltip";
 
 const Dock = () => {
+const { windows, openWindow, closeWindow } = useWindowStore();
   const dockRef = useRef(null);
 
   useGSAP(()=>{
@@ -52,12 +54,27 @@ const Dock = () => {
   },[])
 
   const toogleApp = (app) => {
-    //TODO: Implement app toggling logic
+    // Todo: Implement app toggling logic
+ if (!app.canOpen) return;
+
+  const window = windows[app.id];
+
+  if (window.isOpen) {
+    closeWindow(app.id)
+  }else{
+    openWindow(app.id)
+  }
+
+  console.log(windows);
+  
+
+
+  
   };
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen }) => (
+        {dockApps.map(({id, name, icon, canOpen}) => (
           <div key={id} className="relative flex justify-center">
             <button
               type="button"
@@ -67,7 +84,9 @@ const Dock = () => {
               data-tooltip-content={name}
               data-tooltip-delay-show={150}
               disabled={!canOpen}
-              onClick={() => toogleApp}
+              onClick={() => toogleApp({ id, name, icon, canOpen })
+            }
+
             >
                 <img src={`/images/${icon}`}
                  alt={name}
