@@ -42,7 +42,7 @@ const navLinks = [
       id: "photos",
       name: "Gallery",
       icon: "../../public/images/photos.png",
-      canOpen: false
+      canOpen: true
     },
     {
       id: "contact",
@@ -54,7 +54,7 @@ const navLinks = [
       id: 'terminal',
       name: "Skills",
       icon: "../../public/images/terminal.png",
-      canOpen: false
+      canOpen: true
     },
     {
       id: 'trash',
@@ -78,4 +78,30 @@ const WINDOW_CONFIG = {
   }
 
 
-  export { navLinks ,INITIAL_Z_INDEX,WINDOW_CONFIG, navIcons, FONT_WEIGHT, dockApps, };
+  const techstack = [
+    {
+      category: "Frontend",
+      items: ["Reactjs","Wix","Nextjs"]
+    },
+    {
+      category: "Mobile",
+      items: [ "React Native expo"]
+    },
+    {
+      category: "Styling",
+      items: [ "Tailwind css"]
+    },
+    {
+      category: "Backend",
+      items: ["Node js", "Express js"]
+    },
+    {
+      category: "Database",
+      items: ["MongoDB"]
+    },{
+      category: "Dev Tools",
+      items: ["Git","Github","Vscode"]
+    }
+  ]
+
+  export { navLinks ,INITIAL_Z_INDEX,WINDOW_CONFIG, navIcons, FONT_WEIGHT, dockApps,techstack };
