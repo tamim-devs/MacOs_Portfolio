@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { use, useRef } from "react";
+import React, { useRef } from "react";
 import { FONT_WEIGHT } from "../constants";
 
 const Welcome = () => {
@@ -18,7 +18,7 @@ const Welcome = () => {
         key={i}
         className={className}
         style={{
-          fontVariationSettings: `'wght ${baseWeight}`,
+          fontVariationSettings: `'wght ${baseWeight}'`,
         }}
       >
         {char === " " ? "\u00A0" : char}
@@ -35,7 +35,7 @@ const Welcome = () => {
     const animateLetters = (letter, weight, duration = 0.25) => {
       return gsap.to(letter, {
         duration,
-        ease: "power2.Out",
+        ease: "power2.out",
         fontVariationSettings: `'wght' ${weight}`,
       });
     };
@@ -60,20 +60,31 @@ const Welcome = () => {
   };
 
   return (
-    <section id="welcome">
+    <section
+      id="welcome"
+      className="scale-[0.75] w-0 h-0 md:scale-90 lg:scale-100 text-center"
+    >
+      {/* Subtitle */}
       <p className="no-underline" ref={subtitleRef}>
         {renderText(
           "Hey, I'm Tamim ! Welcome to My",
-          "text-3xl font-georama ",
+          "text-xl md:text-2xl font-georama",
           100
         )}
       </p>
-      <h1 ref={titleRef} className="m-7">
-        {renderText("Portfolio", "text-9xl font-georama italic")}
+
+      {/* Title */}
+      <h1 ref={titleRef} className="my-4">
+        {renderText(
+          "Portfolio",
+          "text-5xl md:text-2xl lg:text-8xl font-georama italic",
+        )}
       </h1>
 
-      <div className="small-device">
-        <p>This portfolio is designed for dekstop /tablet screens only.</p>
+      <div className="small-device mt-3">
+        <p className="text-sm opacity-70">
+          This portfolio is designed for desktop/tablet screens only.
+        </p>
       </div>
     </section>
   );

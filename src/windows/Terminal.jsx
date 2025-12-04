@@ -8,7 +8,7 @@ const Terminal = () => {
   return (
     <section className='absolute z-20  w-md mt-20 '>
 <div id='window-control'>
-  <p><WindowControls target="terminal"/></p>
+<div><WindowControls target="terminal"/></div>
   <p>Tech Stack</p>
 </div>
 
@@ -50,6 +50,6 @@ const Terminal = () => {
   )
 }
 
- const  TerminalWindow = WindowWrapper(Terminal, 'terminal')
+const  TerminalWindow = WindowWrapper(Terminal, 'terminal')
 
 export default TerminalWindow

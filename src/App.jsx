@@ -1,20 +1,24 @@
 import gsap from "gsap"
 import { Draggable } from 'gsap/Draggable'
 
-import { Dock, Navbar,Welcome } from "#components"
-import { Terminal } from "#windows"
+import { Dock, Home, Navbar } from "#components"
+import { Contact, Finder, ImgFile, Resume, Safari, Terminal, TxtFile } from "#windows"
 
 gsap.registerPlugin(Draggable)
 
 const App = () => {
   return (
     <main>
-     <Navbar/>
-     <Terminal/>
-     
-     <Welcome/>
-     <Dock/>
-
+      <Navbar/>
+      <TxtFile/>
+      <Contact/> 
+      <ImgFile/>
+      <Finder/>
+      <Terminal/>
+      <Safari/>
+      <Resume/>
+      <Home/>
+      <Dock/>
     </main>
   )
 }

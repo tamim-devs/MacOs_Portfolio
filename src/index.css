@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
 
 html,
@@ -32,28 +31,35 @@ body {
 }
 
 @layer base {
+
     main {
         @apply w-dvw h-dvh overflow-hidden;
     }
 
     nav {
-        @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none
+        @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
     }
 
-    div {
+    /* -----------------------------
+       FIXED: Only navbar div uses flex
+    ------------------------------ */
+    nav div {
         @apply flex items-center max-sm:justify-center gap-5;
     }
 
-    nav:last-child {
-        @apply max-sm:hidden;
+    /* -----------------------------
+       FIXED: Only navbar list layout
+    ------------------------------ */
+    nav ul {
+        @apply flex items-center gap-5 max-sm:hidden;
     }
 
-    ul {
-        @apply flex items-center gap-5 max-sm:hidden
+    nav li {
+        @apply flex gap-3 items-center;
     }
 
     p {
-        @apply text-sm cursor-pointer hover:underline transition-all duration-300
+        @apply text-sm cursor-pointer hover:underline transition-all duration-300;
     }
 
     .icon-hover {
@@ -61,14 +67,15 @@ body {
     }
 
     time {
-        @apply text-xs font-bold
+        @apply text-xs font-bold;
     }
 
     #welcome {
-        @apply w-dvw  flex-col text-white h-dvh flex items-center justify-center p-5 max-sm:flex-col sm:p-10 md:p-16 lg:p-20 ;
+        @apply w-dvw flex-col text-white h-dvh flex items-center justify-center p-5 max-sm:flex-col sm:p-10 md:p-16 lg:p-20;
     }
-    .small-device{
-        @apply sm:hidden
+
+    .small-device {
+        @apply sm:hidden;
     }
 
     #dock {
@@ -77,61 +84,99 @@ body {
         .dock-container {
             @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5
             flex items-end gap-1.5;
-            
         }
 
         .tooltip {
-            @apply !p-1 !p-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+            @apply !p-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
         }
 
         .dock-icon {
-            @apply size-14 3xl:size-20 cursor-pointer; 
+            @apply size-14 3xl:size-20 cursor-pointer;
 
             img {
                 @apply object-cover object-center;
             }
         }
     }
- #window-control {
-  @apply bg-white p-2 flex justify-between items-center 
-  w-full max-w-[500px] mx-auto border-b rounded-t-xl;
-}
 
-#window-control p {
-  @apply text-gray-400 font-bold text-sm;
-}
+    .active {
+        @apply bg-sky-200 font-bold w-full;
+    }
 
-.terminal {
-  @apply bg-white w-full max-w-[500px] mx-auto p-6 rounded-b-xl shadow-xl flex flex-col gap-4 text-sm font-mono;
-}
+    .not-active {
+        @apply bg-white w-full;
+    }
 
-.cmd {
-  @apply font-semibold mb-2 ;
-}
+    #window-header {
+        @apply absolute left-1/2 -translate-x-1/2
+        bg-white p-2 my-4 flex justify-between items-center
+        w-auto mx-auto border-b rounded-t-xl
+        shadow-lg z-50;
+    }
 
-.label {
-  @apply flex justify-between font-bold border-b pb-2
-  w-full text-sm md:text-base;
-}
+    #window-control {
+        @apply bg-white p-2 flex justify-between items-center 
+        w-full max-w-[500px] mx-auto border-b rounded-t-xl;
+    }
 
-.content {
-  @apply flex w-full flex-col gap-3;
-}
+    #window-control p {
+        @apply text-gray-400 font-bold text-sm;
+    }
 
-.row {
-  @apply flex justify-between items-start w-full flex-wrap;
-}
+    .terminal {
+        @apply bg-white w-full max-w-[500px] mx-auto p-6 rounded-b-xl shadow-xl flex flex-col gap-4 text-sm font-mono;
+    }
 
-.left {
-  @apply flex items-center gap-2 font-bold text-green-600 text-sm md:text-base;
-}
+    .cmd {
+        @apply font-semibold mb-2;
+    }
 
-.right {
-  @apply text-gray-700 text-sm md:text-base text-right md:text-start;
-}
+    .label {
+        @apply flex justify-between font-bold border-b pb-2
+        w-full text-sm md:text-base;
+    }
 
-.check {
-  @apply text-green-500 w-4;
-}
+    .content {
+        @apply flex w-full flex-col gap-3;
+    }
 
+    .row {
+        @apply flex justify-between items-start w-full flex-wrap;
+    }
+
+    .left {
+        @apply flex items-center gap-2 font-bold text-green-600 text-sm md:text-base;
+    }
+
+    .right {
+        @apply text-gray-700 text-sm md:text-base text-right md:text-start;
+    }
+
+    .check {
+        @apply text-green-500 w-4;
+    }
+
+    #safari-window {
+        @apply flex flex-col bg-white w-full max-w-full mx-auto rounded-xl shadow-xl pb-6;
+    }
+
+    .safari-header {
+        @apply w-[800px] flex justify-around mt-4 rounded-t-xl px-4;
+    }
+
+    .nav-buttons {
+        @apply flex items-center gap-3;
+    }
+
+    .searchbox {
+        @apply flex items-center justify-between bg-gray-100 px-3 py-1 rounded-full w-full max-w-lg;
+    }
+
+    .searchbox input {
+        @apply bg-transparent flex-1 outline-none;
+    }
+
+    .safari-content {
+        @apply flex flex-col;
+    }
 }
