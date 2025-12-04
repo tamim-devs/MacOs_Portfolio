@@ -18,7 +18,7 @@ const Home = () => {
     <div className="relative w-full h-full p-8 select-none bg-transparent">
 
       {/* Desktop Folders */}
-      <div className=" absolute grid grid-cols-5 md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-10 gap-10">
+      <div className="absolute grid grid-cols-5 sm:grid-cols-7 md:grid-cols-8 lg:grid-cols-10 gap-10">
         {desktopFolders.map((folder) => (
           <div
             key={folder.id}
@@ -26,14 +26,12 @@ const Home = () => {
             className="flex flex-col items-center gap-2 cursor-pointer group"
           >
             {/* Folder Icon */}
-            <div
-              className="
-                transition-all 
-                group-hover:scale-110 
-                group-hover:-translate-y-1 
-                drop-shadow-[0_10px_8px_rgba(0,0,0,0.25)]
-              "
-            >
+            <div className="
+              transition-all 
+              group-hover:scale-110 
+              group-hover:-translate-y-1 
+              drop-shadow-[0_10px_8px_rgba(0,0,0,0.25)]
+            ">
               <img
                 src={folder.icon}
                 alt={folder.name}
@@ -42,19 +40,17 @@ const Home = () => {
             </div>
 
             {/* Folder Label */}
-            <p
-              className="
-                text-[11px] 
-                text-white 
-                text-center 
-                px-2 py-1 
-                rounded-md 
-                bg-black/40 
-                backdrop-blur-sm 
-                shadow-sm 
-                group-hover:bg-black/50
-              "
-            >
+            <p className="
+              text-[11px] 
+              text-white 
+              text-center 
+              px-2 py-1 
+              rounded-md 
+              bg-black/40 
+              backdrop-blur-sm 
+              shadow-sm 
+              group-hover:bg-black/50
+            ">
               {folder.name}
             </p>
           </div>
@@ -62,21 +58,22 @@ const Home = () => {
       </div>
 
       {/* Welcome floating center */}
-<div
-  className="
-    absolute 
-    top-1/2 left-1/2 
-    -translate-x-1/2 -translate-y-1/2
-    opacity-90
-    z-40
-    select-auto
-    pointer-events-none   /* পুরো Welcome block-এর ওপর ক্লিক যাবে না */
-  "
->
-  <div className="pointer-events-auto select-text">
-    <Welcome />
-  </div>
-</div>
+      <div
+        className="
+          absolute 
+          top-1/2 left-1/2 
+          -translate-x-1/2 -translate-y-1/2
+          opacity-90
+          z-40
+          select-auto
+          pointer-events-none
+        "
+      >
+        {/* Show only on sm+ screens */}
+        <div className="pointer-events-auto select-text hidden sm:block">
+          <Welcome />
+        </div>
+      </div>
 
     </div>
   );

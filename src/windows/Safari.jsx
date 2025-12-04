@@ -56,7 +56,7 @@ const Safari = () => {
 
         <h2 className="text-3xl font-bold text-black mb-4">My Developer Blog</h2>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex h-96 overflow-auto flex-col gap-8">
           {blogpost.map(({ id, title, images, link, date }) => (
             <div
               key={id}

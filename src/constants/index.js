@@ -130,59 +130,94 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-   {
-  id: 5,
-  name: "Nike Project",
-  icon: "/images/folder.png",
-  kind: "folder",
-  position: "top-10 left-5",
-  windowPosition: "top-[15vh] right-20",
-  children: [
     {
-      id: 1,
-      name: "preview.png",
-      icon: "/images/adrian-2.jpg",
-      kind: "file",
-      fileType: "img",
-      src: "/images/adrian-2.jpg",
-       description: [
-    "Nike Ecommerce Website Preview",
-    "Tech: React, Tailwind, Stripe",
-    "Responsive UI + Smooth Animations"
-  ]
-    },
-    {
-      id: 2,
-      name: "Description.txt",
-      icon: "/images/txt.png",
-      kind: "file",
-      fileType: "txt",
-      description: [
-        "This is my Nike ecommerce website...",
-        "Built with React, Tailwind, etc...",
+      id: 5,
+      name: "Ankith jain",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-5",
+      windowPosition: "top-[15vh] right-20",
+      children: [
+        {
+          id: 1,
+          name: "design.png",
+          icon: "/images/project1.png",
+          kind: "file",
+          fileType: "img",
+          src: "/images/project1.png",
+          description: [" "]
+        },
+        {
+          id: 2,
+          name: "Description.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "This project showcases a modern personal brand website designed for an Omni-Investor, visionary leader, and entrepreneur. The design focuses on clarity, bold typography, and a premium minimal aesthetic to highlight credibility, experience, and achievements."
+          ]
+        },
+        {
+          id: 3,
+          name: "Live Demo.url",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://minhaj-vai.vercel.app/"
+        },
+        {
+          id: 4,
+          name: "Source Code.url",
+          icon: "/images/folder.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/tamim-devs/Minhaj_vai"
+        }
       ]
     },
-    {
-      id: 3,
-      name: "Live Demo.url",
-      icon: "/images/safari.png",
-      kind: "file",
-      fileType: "url",
-      href: "https://www.youtube.com/watch?v=j9ZD_hlyHOA&t=9021s",
-    },
-    {
-      id: 4,
-      name: "Source Code.url",
-      icon: "/images/folder.png",
-      kind: "file",
-      fileType: "url",
-      href: "https://github.com/arman/nike",
-    }
-  ]
-}
 
-  ],
+    
+    {
+      id: 2,
+      name: "Carolina Grazing co ",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-40 left-10",
+      windowPosition: "top-[20vh] left-20",
+      children: [
+        {
+          id: 1,
+          name: "readme.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: ["Carolina Grazing Co. is a premium grazing and charcuterie brand based in North Carolina, and I designed & developed their official website using Wix. The project focused on creating a luxury yet welcoming online presence that matches the elegance of their catering services.The website highlights:\n\nElegant, image-driven design that showcases charcuterie boards and grazing tables with high-quality visuals.\n\nUser-friendly navigation allowing visitors to easily explore services, pricing, and contact information.\n\nMobile-first responsive design, ensuring smooth browsing on phones, tablets, and desktops.\n\nBooking & inquiry system integrated directly for customer convenience.nnModern layout with subtle animations, reflecting a premium dining and lifestyle experience.\n\nThis project demonstrates my ability to use Wix to craft professional, polished websites for service-based businesses, balancing both aesthetic and functionality."]
+        }, 
+        {
+           id: 3,
+          name: "Live Demo.url",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://www.carolinagrazingco.com/"
+        },
+
+        {
+            id: 4,
+          name: "design.png",
+          icon: "/images/project2.png",
+          kind: "file",
+          fileType: "img",
+          src: "/images/project2.png",
+          description: [" "]
+        }
+      ]
+    },
+    
+   
+  ]
 };
+
 
 
 const ABOUT_LOCATION = {
@@ -205,36 +240,29 @@ const ABOUT_LOCATION = {
       children: [
         {
           id: 101,
-          name: "preview1.png",
-          icon: "/images/adrian-2.jpg",
+          name: "tamim.png",
+          icon: "/images/tamim.jpg",
           kind: "file",
           fileType: "img",
-          src: "/images/adrian-2.jpg",
+          src: "/images/tamim.jpg",
         },
         {
           id: 102,
           name: "preview2.png",
-          icon: "/images/adrian-2.jpg",
+          icon: "/images/naim.png",
           kind: "file",
           fileType: "img",
-          src: "/images/adrian-2.jpg",
+          src: "/images/naim.png",
         },
         {
           id: 103,
          name: "preview2.png",
-          icon: "/images/adrian-2.jpg",
+          icon: "/images/naim2.png",
           kind: "file",
           fileType: "img",
-          src: "/images/adrian-2.jpg",
+          src: "/images/naim2.png",
         },
-        {
-          id: 104,
-          name: "Source Code.url",
-          icon: "/images/url.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://github.com/arman/nike",
-        }
+       
       ]
     }
   ]

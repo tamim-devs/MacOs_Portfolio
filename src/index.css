@@ -79,7 +79,7 @@ body {
     }
 
     #dock {
-        @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none hidden sm:block;
+        @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none  sm:block;
 
         .dock-container {
             @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5

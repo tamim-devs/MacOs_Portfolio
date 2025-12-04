@@ -12,7 +12,7 @@ const TxtFile = ({ data }) => {
       </div>
 
       {/* CONTENT */}
-      <div className="p-4 text-sm whitespace-pre-line">
+      <div className="p-4 h-96 overflow-auto text-sm whitespace-pre-line">
         {data?.description?.join("\n")}
       </div>
 
