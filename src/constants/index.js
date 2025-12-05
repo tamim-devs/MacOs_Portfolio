@@ -165,14 +165,7 @@ const WORK_LOCATION = {
           fileType: "url",
           href: "https://minhaj-vai.vercel.app/"
         },
-        {
-          id: 4,
-          name: "Source Code.url",
-          icon: "/images/folder.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://github.com/tamim-devs/Minhaj_vai"
-        }
+       
       ]
     },
 
