@@ -248,7 +248,7 @@ const ABOUT_LOCATION = {
         },
         {
           id: 102,
-          name: "preview2.png",
+          name: "naim.png",
           icon: "/images/naim.png",
           kind: "file",
           fileType: "img",
@@ -256,7 +256,7 @@ const ABOUT_LOCATION = {
         },
         {
           id: 103,
-         name: "preview2.png",
+         name: "naim.png",
           icon: "/images/naim2.png",
           kind: "file",
           fileType: "img",
@@ -308,9 +308,16 @@ const socials = [
   {
     id: 1,
     text: "Github",
-    icon: "/icons/github.svg",
+    icon: "/icons/github.png",
     bg: "#4656b",
-    link : "github.com"
+    link : "https://github.com/tamim-devs"
+  },
+  {
+    id: 2,
+    text: "WhatsApp",
+    icon: "/images/whatsapp.png",
+    bg: "#fff",
+    link : "https://wa.me/8801818566361"
   }
 ]
 

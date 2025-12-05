@@ -18,16 +18,15 @@ const Contact = () => {
 
         {/* Profile Photo */}
         <img
-          src="/images/adrian.jpg"
+          src="/images/tamim.png"
           alt="Profile"
           className="w-24 h-24 rounded-full mx-auto ring-4 ring-gray-200 shadow-md"
         />
 
         <h3 className="text-2xl font-semibold text-gray-900">Let's Connect</h3>
 
-        <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
-          Got an idea? A bug to squash?  
-          Or just wanna talk tech? I’m always open.
+        <p className="text-gray-600 no-underline leading-relaxed max-w-xs mx-auto">
+          I work with Frontend development, MERN Stack, and React Native. I enjoy creating simple and clean web and mobile interfaces while learning and improving every day. If you have an idea or need help with a project, feel free to reach out!
         </p>
 
         {/* Social Buttons */}
@@ -38,7 +37,7 @@ const Contact = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-black  px-4 py-2 rounded-xl text-white font-medium shadow 
+                className="flex items-center gap-2 bg-white  px-4 py-2 rounded-xl text- font-medium shadow 
                            hover:brightness-110 hover:scale-[1.05] transition"
                 style={{ backgroundColor: bg }}
               >
